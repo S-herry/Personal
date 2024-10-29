@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Center Scale Example</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .image {
+        transition: transform 0.5s;
+        transform-origin: center; /* 设置中心点为缩放基准 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://via.placeholder.com/300"
+        alt="Example Image"
+        class="image"
+        id="image"
+      />
+    </div>
+
+    <button onclick="scaleImage()">Scale Image</button>
+
+    <script>
+      let scaleFactor = 1;
+
+      function scaleImage() {
+        const image = document.getElementById("image");
+        scaleFactor += 0.2; // 每次点击增加缩放系数
+        image.style.transform = `scale(${scaleFactor})`;
+      }
+    </script>
+  </body>
+</html>
