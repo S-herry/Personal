@@ -3,40 +3,250 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Center Scale Example</title>
-    <style>
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .image {
-        transition: transform 0.5s;
-        transform-origin: center; /* 设置中心点为缩放基准 */
-      }
-    </style>
+    <title>Sherry個人網頁</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <div class="container">
-      <img
-        src="https://via.placeholder.com/300"
-        alt="Example Image"
-        class="image"
-        id="image"
-      />
-    </div>
+    <nav>
+      <ul>
+        <li><a href="#look">關於Sherry</a></li>
+        <li><a href="#miaoli">苗栗景觀</a></li>
+        <li>
+          <a href="#Vege">Vege </a>
+        </li>
+        <!-- <li><a href="/圍棋網站/index.html">圍棋網站</a></li>
+        <li>
+          <a href="http://localhost:3000/">搜尋圖片</a>
+        </li> -->
+      </ul>
+    </nav>
+    <main>
+      <div id="apple">
+        <div class="apple1 x1"></div>
+        <div class="apple1 x2"></div>
+        <div class="apple1 x3"></div>
+        <div class="apple1 x4"></div>
+        <div class="apple1 x5"></div>
+        <div class="apple1 x6"></div>
+        <div class="apple1 x7"></div>
+        <div class="apple1 x8"></div>
+        <div class="apple1 x9"></div>
+        <div class="apple1 x10"></div>
+      </div>
+      <section class="main-area">
+        <div class="info">
+          <h1>
+            你好，<br />
+            我是佩璇
+          </h1>
+          <h2>我是一位前端工程師</h2>
 
-    <button onclick="scaleImage()">Scale Image</button>
+          <section class="d-flex">
+            <div>
+              <p class="fs-6">開發技術及工具:</p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>React.js</li>
+                <li>基礎 Node.js</li>
+                <li>基礎 MySQL</li>
+                <li>基礎 TypeScript</li>
+              </ul>
+            </div>
+            <div class="ms-5">
+              <p>美化圖片工具:</p>
+              <ul>
+                <li>基本figma</li>
+                <li>Photoshop</li>
+              </ul>
+            </div>
+          </section>
+          <p>
+            我能建立直覺友好、高度互動的網站。擅長用 React.js 和 Node.js
+            開發前端應用，也熟悉 jQuery 和 Bootstrap
+            加速開發，提升用戶體驗。目標是打造優秀、吸引人且高效能的網頁應用程式。
+          </p>
+          <a href="https://github.com/S-herry/Work" class="mb-4"
+            >gitHub作品集</a
+          >
+        </div>
 
-    <script>
-      let scaleFactor = 1;
+        <img class="rounded-4" src="./image/個人大頭貼.jpg" alt="個人照" />
+      </section>
 
-      function scaleImage() {
-        const image = document.getElementById("image");
-        scaleFactor += 0.2; // 每次点击增加缩放系数
-        image.style.transform = `scale(${scaleFactor})`;
-      }
-    </script>
+      <section class="about-me">
+        <div class="desc">
+          <h2>自傳</h2>
+          <p class="fs-5 mb-3" style="color: white">
+            我是一名前端工程師，主要專注於使用
+            React技術開發高效且使用者友善的網頁介面。
+            我成功參的專案中都能確保專案按時交付，我熟練掌握
+            HTML、CSS、JavaScript 等前端技術，並且熟悉Bootstrap和Tailwind css
+            前端樣式庫使用，尤其擅長使用 React 框架和 Webpack
+            構建現代化的網頁應用。我不僅能夠創建具響應式和跨瀏覽器相容的網頁，還可以透過與後端
+            API
+            的無縫整合，實現前後端數據的順暢傳遞。此外，我在專案中也常常協助設計團隊和
+            Unity 開發團隊，確保最終的 UI 介面符合設計規範，提升使用者體驗。
+            在我的工作中，我一直注重程式碼的品質和可維護性，積極採用元件化開發方式，確保程式碼的可重用性和擴展性。面對技術挑戰，我保持開放的學習態度，樂於接受新的知識和工具，持續提升自己的專業能力。
+            我希望能夠加入貴公司，運用我所積累的前端開發經驗，為團隊帶來更多價值。同時，我也期待在新的環境中，與優秀的同事們共同成長，迎接更大的挑戰。
+          </p>
+        </div>
+        <hr class="w-100" />
+        <h2>作品1</h2>
+        <div class="desc1 d-flex flex-column" id="miaoli">
+          <div class="pt-5 d-flex gap-5 justify-content-center">
+            <img class="mo" src="/image/苗栗景點.png" />
+            <img class="mo" src="/image/選擇景點.png" />
+          </div>
+          <div class="me-2">
+            <p style="color: white">
+              這個網站專案旨在介紹台灣苗栗縣的熱門景點、美食特色以及周邊交通資訊。透過整合相關資訊，方便旅客快速掌握苗栗的魅力，並利於其規劃前往的旅遊行程。<br />
+              網站的設計強調了使用者體驗和互動性，採用了以下技術：
+              Bootstrap：用於響應式設計，確保網站能夠在各種裝置上保持良好的外觀和操作體驗。
+              CSS/SCSS：透過自訂樣式來強化頁面視覺設計，增強整體一致性和美感。
+              HTML：搭建網頁的基本結構，確保內容清晰易讀。
+              JavaScript：提供互動功能，像是景點介紹的動態展示和選單的即時切換。
+              這個網站首頁展示了多個核心區塊：
+              熱門景點地圖：以直觀的方式呈現苗栗各大景點的地理位置，並支援快速篩選功能。
+              美食推薦：介紹在地特色餐廳和小吃，吸引美食愛好者。
+              交通資訊：提供周邊交通動線，協助遊客輕鬆規劃行程。
+              此外，設計上還包含了互動功能，例如點擊地圖標記能即時顯示該景點的詳細介紹、相片及評分。整體來說，這個網站不僅展示了苗栗的觀光亮點，還兼具實用性，讓使用者能快速找到所需資訊，提升了瀏覽體驗。
+            </p>
+          </div>
+        </div>
+        <hr class="w-100" />
+        <div class="desc1 d-flex flex-column" id="Vege">
+          <h2>作品2</h2>
+          <div class="pt-5 d-flex gap-5 justify-content-center">
+            <img class="mo" src="/image/蔬果箱.png" />
+            <img class="mo" src="/image/蔬果箱2.png" />
+          </div>
+          <div class="me-2">
+            <p style="color: white">
+              Vege 蔬果箱販售訂閱服務
+              生活節奏快速的上班族常常無暇規劃購買新鮮蔬果的時間。在繁忙的超市採購過程中，我們可能買了太多，導致蔬果過期浪費。或者你可能不了解蔬果的特性，不確定應該如何挑選適合自己的品項。為了解決這些問題，我們設計了一套便捷的消費者喜好檢測方法，並提供定期定額配送蔬果箱的服務，讓消費者能夠在線上快速完成客製化訂購。
+              在這次專案中，我負責產品資訊頁面和診斷功能的開發，這讓消費者可以簡單了解蔬果的寒性、平性、熱性特徵，並根據自身需求選擇適合的產品。我們使用
+              Node.js 連結 MySQL
+              資料庫，打造了具有良好互動性的產品資訊頁面。整體設計以及互動功能的實現基本都使用
+              jQuery 函式庫和 Bootstrap 框架，為使用者帶來流暢且愉悅的網站體驗。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume" id="look">
+        <section class="table">
+          <table>
+            <tr style="border-top: 2px solid gray">
+              <td style="width: 20%">自我介紹</td>
+              <td style="width: 80%">
+                &ensp;&ensp;&ensp;
+                原本就讀於明新科技大學餐飲管理科，但在學習過程中，我發現自己對科技領域非常有興趣。後來畢業後，我進入了一家公司擔任業務助理，這份工作主要讓我負責使用
+                Excel和word處理文件和管理數據，這讓我熟悉了資料整理和處理的基本技能。
+                <br />
+                &ensp;&ensp;&ensp;當我得知資策會提供前端工程課程時，覺得這是我轉職的機會，於是我決定轉向前端開發，並在資策會學習到許多現代前端開發所需的技能。
+                <br />
+                &ensp;&ensp;&ensp;這次轉職對我來說從完全不相關的餐飲背景與業務助理轉到前端工程，讓我有種學習新技能的重要性與成就感。
+                <br />
+                &ensp;&ensp;&ensp;在資策會的學習過程中，我掌握了HTML、CSS、JavaScript以及
+                React.js等核心技術，並對前端工程有了更深的理解與熱情。
+                雖然這段轉換的路途充滿挑戰，但每一次解決問題後的成就感，讓我更加堅定方向。
+                <br />
+                &ensp;&ensp;&ensp;我目前在公司擔任前端工程師，他們主要以AR體感和AI，我主要負責專網頁前台相關的專案。在工作中，我學習並運用了React和Unity的技術。但公司的專案大多以Unity為基礎開發，但我更專注於前端技術，尤其是React等框架的應用。希望未來能在以網頁為核心的環境中發揮專長，並持續提升自己在前端開發方面的技能。
+                其實在這個過程中，最大的挑戰之一是英文，由於很多技術文件都是以英文撰寫，這對於我的理解造成了一定的困難。因此，我開始報名英文學習課程，努力提升自己的語言能力，以便在未來能夠更有效地學習國際化的技術相關知識。
+              </td>
+            </tr>
+            <tr>
+              <td>學歷</td>
+              <td>明新科技大學-旅觀與廚藝創意系</td>
+            </tr>
+            <tr>
+              <td>經歷</td>
+              <td>
+                <ul>
+                  <li>
+                    銀展創意擔任前端工程師<br />
+                    主要網站頁面呈現<br />
+                    (2023/11~至今)
+                  </li>
+                  <li>
+                    利優媒體有限公司擔任業務助理<br />
+                    主要負責表單整理與紀錄<br />
+                    (任職1年)
+                  </li>
+                  <li>
+                    聚北海道昆布鍋<br />
+                    主要負責桌邊服務 <br />(任職1年)
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>語言</td>
+              <td>
+                <ul>
+                  <li>中文:精通</li>
+                  <li>英文:略懂</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>聯絡我</td>
+              <td>
+                信箱:
+                <a
+                  href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTHVcFHjcSxdgPdlhrpbKXxGqvXkHHtKgFnnlRppSdmgchRGXPgCTdZJKWkxxrjpfcXDZg"
+                  >hight7501@gmail.com</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>紙本履歷</td>
+              <td>
+                <a
+                  href="https://www.cakeresume.com/pdf/s--yxH4xEkfB8TQwOvRVVlJtw--/abNw9.pdf"
+                >
+                  我的履歷</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>專長</td>
+              <td>
+                <img src="./image//icons/icons8-html-5.svg" alt="HTML5" />
+                <img src="./image//icons/icons8-css3.svg" alt="css3" />
+                <img
+                  src="./image/icons/icons8-javascript.svg"
+                  alt="javascript"
+                />
+                <img src="./image//icons/icons8-react-native.svg" alt="react" />
+                機器學習
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section class="picture">
+          <!-- <img src="./image/IMG_4912.JPG" alt="我" /> -->
+          <div class="green1"></div>
+          <div class="green2"></div>
+          <div class="green3"></div>
+        </section>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./style/Sherry.js"></script>
   </body>
 </html>

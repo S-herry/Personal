@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html body {
+  overflow-x: hidden;
+}
+#look {
+  width: 100vw;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+body {
+  nav {
+    background-color: aliceblue;
+    top: 0;
+    z-index: 5;
+    position: sticky;
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        margin: 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.1s ease;
+          &:hover {
+            color: rgb(54, 212, 138);
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      div.info {
+        // border: 2px solid black;
+        flex-basis: 450px;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: greenyellow;
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      img {
+        // border: 2px solid red;
+        flex-basis: 300px;
+        width: 30vw;
+      }
+    }
+    section.about-me {
+      background-color: cornflowerblue;
+      padding: 5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div.desc {
+        // border: 2px solid black;
+        width: 50%;
+        margin-bottom: 100px;
+
+        text-align: center;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      div.desc1 {
+        // border: 2px solid black;
+        text-align: center;
+        display: flex;
+        border-radius: 10px;
+        padding: 10px;
+        h2 {
+          font-size: 2rem;
+        }
+        img.mo {
+          width: 400px;
+          padding-bottom: 10px;
+        }
+      }
+      div.progress-area {
+        // border: 2px solid rebeccapurple;
+        p {
+          margin: 0.5rem 0;
+        }
+        .progress-bar-area {
+          margin-top: 2rem;
+        }
+      }
+    }
+    section.resume {
+      overflow-x: auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      section.table {
+        flex: 5 1 500px;
+        padding: 2rem;
+        table {
+          border-collapse: collapse;
+          tr {
+            border-bottom: 2px solid gray;
+            transition: all 0.1s ease;
+            &:hover {
+              background-color: rgb(229, 241, 137);
+            }
+            td {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+      section.picture {
+        flex: 1 1 500px;
+        position: relative;
+        img {
+          width: 30vw;
+        }
+        div.green1 {
+          width: 30vw;
+          height: 70vh;
+          position: absolute;
+          border: 10px solid greenyellow;
+          top: 30px;
+          left: 80px;
+          z-index: -1;
+        }
+        div.green2 {
+          width: 50vw;
+          height: 40vh;
+          position: absolute;
+          border: 10px solid greenyellow;
+          top: 300px;
+          left: -300px;
+          z-index: -1;
+        }
+        div.green3 {
+          width: 50vw;
+          height: 40vh;
+          position: absolute;
+          border: 10px solid rgb(190, 209, 160);
+          top: 0px;
+          left: -100px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      nav {
+        flex-direction: column;
+      }
+      section.main-area {
+        div.info {
+          padding: 1rem;
+        }
+        img {
+          width: 90%;
+        }
+      }
+      section.about-me {
+        padding: 1rem 0.5rem;
+        div.desc {
+          width: 80%;
+        }
+        div.progress-area {
+          width: 80%;
+        }
+      }
+      section.resume {
+        overflow-x: auto;
+        section.table {
+          min-width: 800px;
+        }
+      }
+      section.picture {
+        img {
+          width: 90vw;
+        }
+        div.green1,
+        div.green2,
+        div.green3 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    main {
+      nav {
+        position: sticky;
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+#apple {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.apple1 {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+}
+@keyframes animate {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+.x1 {
+  animation: animate 25s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: -5%;
+  top: 5%;
+  transform: scale(0.6);
+}
+.x2 {
+  animation: animate 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  left: 5%;
+  top: 80%;
+  transform: scale(0.4);
+}
+.x3 {
+  animation: animate 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 10%;
+  top: 40%;
+  transform: scale(0.7);
+}
+.x4 {
+  animation: animate 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  left: 20%;
+  top: 0%;
+  transform: scale(0.3);
+}
+.x5 {
+  animation: animate 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  left: 30%;
+  top: 50%;
+  transform: scale(0.5);
+}
+.x6 {
+  animation: animate 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 50%;
+  top: 0%;
+  transform: scale(0.8);
+}
+.x7 {
+  animation: animate 20s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 65%;
+  top: 70%;
+  transform: scale(0.4);
+}
+.x8 {
+  animation: animate 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  left: 80%;
+  top: 10%;
+  transform: scale(0.3);
+}
+.x9 {
+  animation: animate 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  left: 90%;
+  top: 50%;
+  transform: scale(0.6);
+}
+.x10 {
+  animation: animate 26s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  left: 80%;
+  top: 80%;
+  transform: scale(0.3);
+}
